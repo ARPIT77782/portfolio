@@ -1,72 +1,140 @@
 import { motion } from "framer-motion";
+import Antigravity from "@/components/ui/Antigravity";
+import Projects from "./Projects";
+import Contact from "./Contact";
 
 const Home = () => {
   return (
-    <div className="h-screen w-full bg-black text-white flex items-center justify-center relative overflow-hidden">
+    <div>
+      {/* HERO */}
+      <div className="relative min-h-[100svh] w-full bg-black text-white flex items-center justify-center overflow-hidden">
 
-      {/* 🔵 Animated background glow */}
-      <div className="absolute w-[500px] h-[500px] bg-cyan-500/20 blur-[120px] rounded-full top-[-100px] left-[-100px]" />
-      <div className="absolute w-[400px] h-[400px] bg-blue-600/20 blur-[120px] rounded-full bottom-[-100px] right-[-100px]" />
+        {/* 🌌 Background */}
+        <div className="absolute inset-0 z-0">
+          <Antigravity
+            count={220}
+            color="#00ffff"
+            particleSize={0.6}
+            waveSpeed={0.4}
+            waveAmplitude={1}
+            depthFactor={1.1}
+          />
+        </div>
 
-      {/* Content */}
-      <motion.div
-        initial={{ opacity: 0, y: 80 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
-        className="text-center z-10 px-6"
-      >
-        {/* Hello text */}
-        <motion.p
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.2 }}
-          className="text-gray-400 text-lg mb-4 tracking-widest"
-        >
-          HELLO, I'M
-        </motion.p>
+        {/* glow */}
+        <div className="absolute w-[400px] h-[400px] bg-cyan-500/10 blur-[120px] rounded-full top-[-120px] left-[-120px]" />
+        <div className="absolute w-[400px] h-[400px] bg-purple-500/10 blur-[120px] rounded-full bottom-[-120px] right-[-120px]" />
 
-        {/* Name */}
-        <motion.h1
-          initial={{ opacity: 0, scale: 0.9 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ delay: 0.4 }}
-          className="text-5xl md:text-7xl font-extrabold leading-tight"
-        >
-          <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-500 bg-clip-text text-transparent">
-            Prabhakar Kumar Jha
-          </span>
-        </motion.h1>
-
-        {/* Role */}
-        <motion.h2
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.7 }}
-          className="mt-6 text-2xl md:text-3xl text-gray-300 font-semibold"
-        >
-          Full Stack Developer
-        </motion.h2>
-
-        {/* Small description */}
-        <motion.p
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 1 }}
-          className="mt-4 max-w-xl mx-auto text-gray-400 text-lg"
-        >
-          I design and build scalable web applications with modern 
-          technologies like React, Spring Boot and Java. 
-          Passionate about clean code and real-world problem solving.
-        </motion.p>
-
-        {/* Divider line */}
+        {/* 🔥 MAIN CONTENT */}
         <motion.div
-          initial={{ width: 0 }}
-          animate={{ width: "120px" }}
-          transition={{ delay: 1.2, duration: 0.6 }}
-          className="h-[3px] bg-gradient-to-r from-cyan-400 to-blue-500 mx-auto mt-8 rounded-full"
-        />
-      </motion.div>
+          initial="hidden"
+          animate="visible"
+          variants={{
+            hidden: {},
+            visible: {
+              transition: {
+                staggerChildren: 0.18,
+              },
+            },
+          }}
+          className="z-10 text-center px-6"
+        >
+          {/* intro */}
+          <motion.p
+            variants={{
+              hidden: { opacity: 0, y: 30 },
+              visible: { opacity: 1, y: 0 },
+            }}
+            transition={{ duration: 0.6 }}
+            className="text-gray-400 tracking-widest mb-3"
+          >
+            HI, MY NAME IS
+          </motion.p>
+
+          {/* name */}
+          <motion.h1
+            variants={{
+              hidden: { opacity: 0, y: 40, scale: 0.95 },
+              visible: { opacity: 1, y: 0, scale: 1 },
+            }}
+            transition={{ duration: 0.7, ease: "easeOut" }}
+            className="text-4xl sm:text-5xl md:text-7xl font-bold mb-4"
+          >
+            <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+              Prabhakar Kumar Jha
+            </span>
+          </motion.h1>
+
+          {/* role */}
+          <motion.h2
+            variants={{
+              hidden: { opacity: 0, y: 30 },
+              visible: { opacity: 1, y: 0 },
+            }}
+            transition={{ duration: 0.6 }}
+            className="text-lg sm:text-xl md:text-2xl text-gray-300 mb-6"
+          >
+            Full Stack Developer | Java • React • Spring Boot
+          </motion.h2>
+
+          {/* desc */}
+          <motion.p
+            variants={{
+              hidden: { opacity: 0, y: 25 },
+              visible: { opacity: 1, y: 0 },
+            }}
+            transition={{ duration: 0.6 }}
+            className="max-w-2xl mx-auto text-gray-400 mb-8"
+          >
+            I build scalable full-stack applications and modern web
+            experiences. Passionate about problem solving, clean code,
+            and creating impactful digital products.
+          </motion.p>
+
+          {/* buttons */}
+          <motion.div
+            variants={{
+              hidden: { opacity: 0, y: 25 },
+              visible: { opacity: 1, y: 0 },
+            }}
+            transition={{ duration: 0.6 }}
+            className="flex flex-col sm:flex-row justify-center items-center gap-4"
+          >
+            <a
+              href="#projects"
+              className="px-6 py-3 bg-cyan-500 hover:bg-cyan-600 rounded-md font-semibold transition hover:scale-105"
+            >
+              View Projects
+            </a>
+
+            <a
+              href="#contact"
+              className="px-6 py-3 border border-gray-600 hover:border-cyan-400 rounded-md font-semibold transition hover:scale-105"
+            >
+              Contact Me
+            </a>
+          </motion.div>
+        </motion.div>
+
+        {/* scroll indicator */}
+        <motion.div
+          animate={{ y: [0, 14, 0] }}
+          transition={{ repeat: Infinity, duration: 1.6 }}
+          className="absolute bottom-6 text-gray-400 text-sm"
+        >
+          Scroll ↓
+        </motion.div>
+      </div>
+
+      {/* PROJECTS */}
+      <div id="projects">
+        <Projects />
+      </div>
+
+      {/* CONTACT */}
+      <div id="contact">
+        <Contact />
+      </div>
     </div>
   );
 };

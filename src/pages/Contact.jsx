@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { FaGithub, FaLinkedin, FaInstagram, FaCopy, FaEnvelope } from "react-icons/fa";
 import { useState } from "react";
+import Antigravity from "@/components/ui/Antigravity";
 
 const Contact = () => {
   const email = "jhaprabhakarindia@gmail.com"; // change
@@ -34,6 +35,28 @@ const Contact = () => {
   ];
 
   return (
+    <div className="relative h-screen w-full bg-black text-white flex items-center justify-center overflow-hidden">
+
+      {/* 🌌 Antigravity Background */}
+      <div className="absolute inset-0 z-0">
+        <Antigravity
+          count={350}
+          magnetRadius={6}
+          ringRadius={8}
+          waveSpeed={0.5}
+          waveAmplitude={1.2}
+          particleSize={0.7}
+          lerpSpeed={0.05}
+          color="#00ffff"
+          autoAnimate
+          particleVariance={1}
+          rotationSpeed={0.05}
+          depthFactor={1.2}
+          pulseSpeed={2}
+          particleShape="sphere"
+          fieldStrength={12}
+        />
+      </div>
     <section className="min-h-screen bg-black text-white py-28 px-6 relative overflow-hidden">
 
       {/* background glow */}
@@ -108,6 +131,7 @@ const Contact = () => {
         <p className="text-center text-green-400 mt-6">Email copied ✔</p>
       )}
     </section>
+      </div>
   );
 };
 

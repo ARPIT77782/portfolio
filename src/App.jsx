@@ -4,7 +4,7 @@ import Footer from "./components/Footer";
 
 import Home from "./pages/Home";
 import Projects from "./pages/Projects";
-import Experience from "./pages/Experience";
+import Education from "./pages/Education";
 import Contact from "./pages/Contact";
 // import CustomCursor from "./components/CustomCursor";
 import About from "./pages/About";
@@ -20,7 +20,7 @@ function App() {
           
           <Route path="/" element={<Home />} />
           <Route path="/projects" element={<Projects />} />
-          <Route path="/experience" element={<Experience />} />
+          <Route path="/education" element={<Education />} />
           <Route path="/contact" element={<Contact />} />
           <Route path='/About' element={<About />} />
           <Route path='/resume' element={<Resume />} />
