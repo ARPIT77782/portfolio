@@ -13,7 +13,7 @@ const Resume = () => {
 
         <a
           href="/resume.pdf"
-          download="Prabhakar_Resume.pdf"
+          download="Arpit_Resume.pdf"
           className="inline-block mb-10 px-8 py-3 bg-cyan-500 hover:bg-cyan-600 rounded-lg font-semibold transition"
         >
           Download Resume ↓
@@ -21,7 +21,7 @@ const Resume = () => {
 
         <div className="w-full h-[800px] border border-gray-700 rounded-xl overflow-hidden">
           <iframe
-            src="/resume.pdf"
+            src="public\resume.pdf"
             title="Resume"
             className="w-full h-full"
           ></iframe>

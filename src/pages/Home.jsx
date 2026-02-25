@@ -61,7 +61,7 @@ const Home = () => {
             className="text-4xl sm:text-5xl md:text-7xl font-bold mb-4"
           >
             <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
-              Prabhakar Kumar Jha
+              Arpit Jha
             </span>
           </motion.h1>
 

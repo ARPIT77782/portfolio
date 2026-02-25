@@ -80,7 +80,7 @@ const About = () => {
             </h3>
 
             <p className="text-gray-300 leading-relaxed mb-4">
-              I'm <span className="text-white font-semibold">Prabhakar Kumar Jha</span>,
+              I'm <span className="text-white font-semibold">Arpit Jha</span>,
               a passionate Full Stack Developer and Computer Science student.
               I love building scalable web applications and solving real-world problems.
             </p>
@@ -109,7 +109,7 @@ const About = () => {
             </h3>
 
             <div className="space-y-3 text-gray-300">
-              <p><span className="text-white">Name:</span> Prabhakar Kumar Jha</p>
+              <p><span className="text-white">Name:</span> Arpit Jha</p>
               <p><span className="text-white">Degree:</span> B.E CSE</p>
               <p><span className="text-white">University:</span> Chandigarh University</p>
               <p><span className="text-white">Location:</span> India</p>

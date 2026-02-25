@@ -4,7 +4,7 @@ import { useState } from "react";
 import Antigravity from "@/components/ui/Antigravity";
 
 const Contact = () => {
-  const email = "jhaprabhakarindia@gmail.com"; // change
+  const email = "arpitjha66@gmail.com"; // change
   const [copied, setCopied] = useState(false);
 
   const copyEmail = () => {
